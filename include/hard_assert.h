@@ -1,8 +1,10 @@
 #pragma once
 
-#ifndef _WINDOWS_
-	#error hard_assert requires windows.h to be included
-#endif
+#include <stdbool.h>
+#include <stdarg.h>
 
-#define ha_assert(condition, application_name, message) do { if(!(condition)) ha_abort(application_name, message); } while(0)
-#define ha_abort(application_name, message) do { MessageBoxA(NULL, application_name " unrecoverable error : '" message "'", "Unrecoverable Error", MB_OK | MB_ICONERROR | MB_TOPMOST); abort(); } while(0)
+extern bool ha_require_user_interaction;
+
+void ha_set_application_name(char[]);
+void ha_assert(bool condition, char message[]);
+void ha_abort(char message[]);
