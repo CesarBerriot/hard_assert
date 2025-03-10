@@ -4,8 +4,8 @@ extern "C" {
 #include <string>
 #include <sstream>
 
-char * format_message(char application_name[], char message[])
+char * format_message(char module_name[], char message[])
 {	static thread_local std::string result;
-	result = (std::stringstream() << application_name << " unrecoverable error : '" << message << "'").str();
+	result = (std::stringstream() << module_name << " unrecoverable error : '" << message << "'").str();
 	return (char*)result.data();
 }

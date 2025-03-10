@@ -3,12 +3,10 @@
 
 TEST(assert, false)
 {	ha_require_user_interaction = false;
-	ha_set_application_name("");
-	ASSERT_DEATH(ha_assert(false, ""), " unrecoverable error : ''");
+	ASSERT_DEATH(ha_assert(false, "", ""), " unrecoverable error : ''");
 }
 
 TEST(assert, true)
 {	ha_require_user_interaction = false;
-	ha_set_application_name("");
-	ha_assert(true, "");
+	ha_assert(true, "", "");
 }

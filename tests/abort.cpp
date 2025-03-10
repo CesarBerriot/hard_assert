@@ -3,6 +3,5 @@
 
 TEST(abort, abort)
 {	ha_require_user_interaction = false;
-	ha_set_application_name("");
-	ASSERT_DEATH(ha_abort(""), " unrecoverable error : ''");
+	ASSERT_DEATH(ha_abort("", ""), " unrecoverable error : ''");
 }
