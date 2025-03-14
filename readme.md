@@ -4,7 +4,7 @@
     FetchContent_Declare(
         hard_assert
         GIT_REPOSITORY https://github.com/CesarBerriot/hard_assert.git
-        GIT_TAG 1.1.0
+        GIT_TAG 1.2.0
     )
     FetchContent_MakeAvailable(hard_assert)
 

@@ -3,7 +3,7 @@ include(FetchContent)
 FetchContent_Declare(
   setup_gtest
   GIT_REPOSITORY https://github.com/CesarBerriot/setup_gtest.git
-  GIT_TAG 1.0.0
+  GIT_TAG 1.2.0
 )
 
 FetchContent_MakeAvailable(setup_gtest)
